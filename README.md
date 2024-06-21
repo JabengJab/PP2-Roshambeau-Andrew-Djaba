@@ -14,6 +14,8 @@ Roshambeau (Rock-Paper-Scissors-Lizard-Spock) is a web-based game where players 
 - [Features left to implement](#features-left-to-implement)
 - [Testing](#testing)
 - [Deployment](#deployment)
+- [Bugs](#bugs)
+- [Credits](#credits)
 
 ## Usage
 
@@ -106,17 +108,26 @@ No errors were found when passing through the official [Jigsaw validator](https:
 #### Lighthouse
 
 ##### Performance
-
+##### Mobile devices
 ![performance](assets/images/lighthouse1.PNG)
 
-##### Accessibility
+##### Desktops
+![performancedesktop](assets/images/performancedesktop.PNG)
 
+
+##### Accessibility
+##### Mobile devices
 ![accessibility](assets/images/accessibility.PNG)
 
-##### Best practices and SEO
+##### Desktops
+![accessibilitydesktop](assets/images/accessibilitydesktop.PNG)
 
+##### Best practices and SEO
+##### Mobile devices
 ![SEO](assets/images/SEO.PNG)
 
+##### Desktops
+![bestpracdesktop](assets/images/bestpracdesktop.PNG)
 
 
 
