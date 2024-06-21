@@ -103,3 +103,38 @@ h1{
         padding: 0.5rem 1rem;
     }
 }
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .choices button {
+        font-size: 5.5rem;
+        min-width: 120px;
+        margin: 0 8px;
+    }
+
+    #playerDisplay, #computerDisplay {
+        font-size: 2rem;
+    }
+
+    #resultDisplay {
+        font-size: 3.5rem;
+        margin: 20px 0;
+    }
+
+    .scoreDisplay {
+        font-size: 1.8rem;
+    }
+
+    .scoreboard p {
+        font-size: 25px;
+    }
+
+    .reset {
+        font-size: 1.2rem;
+        padding: 0.7rem 1.2rem;
+    }
+}
