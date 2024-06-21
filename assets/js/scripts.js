@@ -6,8 +6,14 @@ const playerScoreDisplay = document.getElementById("playerScoreDisplay");
 const computerScoreDisplay = document.getElementById("computerScoreDisplay");
 let playerScore = 0;
 let computerScore = 0;
+let rounds = 5; // Number of rounds in a game
 
 function playGame(playerChoice) {
+    if (rounds <= 0) {
+        alert("Game over! Please reset the game.");
+        return;
+    }
+
     const computerChoice = choices[Math.floor(Math.random() * 5)];
     let result = "";
 
@@ -39,16 +45,34 @@ function playGame(playerChoice) {
 
     resultDisplay.classList.remove("whiteText", "redText");
 
-    switch (result) {
-        case "YOU WIN!":
-            resultDisplay.classList.add("whiteText");
-            playerScore++;
-            playerScoreDisplay.textContent = playerScore;
-            break;
-        case "YOU LOSE!":
-            resultDisplay.classList.add("redText");
-            computerScore++;
-            computerScoreDisplay.textContent = computerScore;
-            break;
+    if (result === "YOU WIN!") {
+        resultDisplay.classList.add("whiteText");
+        playerScore++;
+        playerScoreDisplay.textContent = playerScore;
+    } else if (result === "YOU LOSE!") {
+        resultDisplay.classList.add("redText");
+        computerScore++;
+        computerScoreDisplay.textContent = computerScore;
     }
+
+    rounds--;
+    document.getElementById('duelRounds').textContent = `Rounds left: ${rounds}`;
+
+    if (rounds <= 0) {
+        alert("Game over! Please reset the game.");
+    }
+}
+
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    rounds = 5;
+
+    playerScoreDisplay.textContent = playerScore;
+    computerScoreDisplay.textContent = computerScore;
+    document.getElementById('duelRounds').textContent = `Rounds left: ${rounds}`;
+    playerDisplay.textContent = 'PLAYER:';
+    computerDisplay.textContent = 'COMPUTER:';
+    resultDisplay.textContent = '';
+    resultDisplay.classList.remove("whiteText", "redText");
 }

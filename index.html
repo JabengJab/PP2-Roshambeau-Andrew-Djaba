@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-     <!-- font awesome and google fonts-->
+    <!-- font awesome and google fonts-->
 
     <script src="https://kit.fontawesome.com/95a43c4ec4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,8 @@
     <title>Roshambeau</title>
 </head>
 
-    <!-- Main body -->
+<!-- Main body -->
+
 <body>
     <h1>Roshambeau</h1>
 
@@ -29,18 +30,21 @@
         <button onclick="playGame('lizard')">🦎</button>
         <button onclick="playGame('spock')">🖖</button>
     </div>
-    
+
     <div id="playerDisplay">PLAYER: </div>
     <div id="computerDisplay">COMPUTER: </div>
     <div id="resultDisplay"></div>
-
     <div class="scoreDisplay">Player Score:
         <span id="playerScoreDisplay">0</span>
     </div>
-
     <div class="scoreDisplay">Computer Score:
         <span id="computerScoreDisplay">0</span>
     </div>
+    <div id="duelRounds">Rounds left: 5</div>
+    
+    <button onclick="resetGame()" class="reset">Reset Game</button>
+    
+    
 
     <script src="assets/js/scripts.js"></script>
 </body>

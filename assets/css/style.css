@@ -28,13 +28,12 @@ h1{
 }
 
 .choices button:hover{
-    background-color: hs1(200, 100%, 70%);
+    background-color: hsl(200, 100%, 70%);
 }
 
 #playerDisplay, #computerDisplay{
     font-size: 2.5rem;
     color:  #ad8c45;
-
 }
 
 #resultDisplay{
@@ -47,9 +46,60 @@ h1{
 }
 
 .whiteText, #playerScoreDisplay{
-    color: rgba(103, 103, 224, 0.945);;   
+    color: rgba(103, 103, 224, 0.945);   
 }
 
 .redText, #computerScoreDisplay{
     color: red;
+}
+
+.scoreboard {
+    text-align: center;
+    color: #ad8c45;
+}
+
+.scoreboard p {
+    font-size: 30px;
+    padding-bottom: 0;
+}
+
+.reset {
+    background-color: #7c73e6;
+    color: #fafafa;
+    margin-top: 1rem;
+}
+
+/* Media Query for Smartphones */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    .choices button {
+        font-size: 3.5rem;
+        min-width: 80px;
+        margin: 0 5px;
+    }
+
+    #playerDisplay, #computerDisplay {
+        font-size: 1.5rem;
+    }
+
+    #resultDisplay {
+        font-size: 2.5rem;
+        margin: 15px 0;
+    }
+
+    .scoreDisplay {
+        font-size: 1.5rem;
+    }
+
+    .scoreboard p {
+        font-size: 20px;
+    }
+
+    .reset {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
 }
