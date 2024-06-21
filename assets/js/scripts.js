@@ -1,37 +1,18 @@
-// Rock Paper Scissors Spock
-
-const choices = ["rock", "paper", "scissors", "lizard", "spock"];
-const playerDisplay = document.getElementById("playerDisplay");
-const computerDisplay = document.getElementById("computerDisplay");
-const resultDisplay = document.getElementById("resultDisplay");
-const playerScoreDisplay = document.getElementById("playerScoreDisplay");
-const computerScoreDisplay = document.getElementById("computerScoreDisplay");
-
-function playGame(playerChoice){
-
-    const computerChoice = choices[Math.floor(Math.random() *3)];
+function playGame(playerChoice) {
+    const computerChoice = choices[Math.floor(Math.random() * 5)];
     let result = "";
 
-    if(playerChoice === computerChoice){
+    if (playerChoice === computerChoice) {
         result = "IT'S A TIE";
-    }
-    else{
-        switch(playerChoice){
-            case "rock":
-                result = (computerChoice === "scissors") ? "YOU WIN!" : "YOU LOSE!";
-                break;
-                case "paper":
-                result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
-                break;
-                case "scissors":
-                result = (computerChoice === "paper") ? "YOU WIN!" : "YOU LOSE!";
-                break;
-                case "lizard":
-                result = (computerChoice === "spock") ? "YOU WIN!" : "YOU LOSE!";
-                break;
-                case "spock":
-                result = (computerChoice === "rock") ? "YOU WIN!" : "YOU LOSE!";
-                break;
+    } else {
+        if ((playerChoice === "rock" && (computerChoice === "scissors" || computerChoice === "lizard")) ||
+            (playerChoice === "paper" && (computerChoice === "rock" || computerChoice === "spock")) ||
+            (playerChoice === "scissors" && (computerChoice === "paper" || computerChoice === "lizard")) ||
+            (playerChoice === "lizard" && (computerChoice === "spock" || computerChoice === "paper")) ||
+            (playerChoice === "spock" && (computerChoice === "rock" || computerChoice === "scissors"))) {
+            result = "YOU WIN!";
+        } else {
+            result = "YOU LOSE!";
         }
     }
 
@@ -41,14 +22,13 @@ function playGame(playerChoice){
 
     resultDisplay.classList.remove("whiteText", "redText");
 
-    switch(result){
-        case "YOU WIN!": 
-                resultDisplay.classList.add("whiteText");
-                break;
-        case "YOU LOSE!": 
-                resultDisplay.classList.add("redText");
-                break;        
-
+    if (result === "YOU WIN!") {
+        resultDisplay.classList.add("whiteText");
+        playerScore++;
+        playerScoreDisplay.textContent = playerScore;
+    } else if (result === "YOU LOSE!") {
+        resultDisplay.classList.add("redText");
+        computerScore++;
+        computerScoreDisplay.textContent = computerScore;
     }
-
 }
