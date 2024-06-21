@@ -50,7 +50,7 @@ Roshambeau (Rock-Paper-Scissors-Lizard-Spock) is a web-based game where players 
 
 ## File Structure
 
-![File stucture](assets/images/File structure.PNG)
+![File stucture](assets/images/Filestructure.PNG)
 
 ## Technologies Used
 
@@ -63,6 +63,14 @@ Roshambeau (Rock-Paper-Scissors-Lizard-Spock) is a web-based game where players 
 
 ### Features Left to Implement
 
+#### Add sound effects
+* For each button (choices) when clicked on. This will make the game more lively.
+
+#### Multiplayer mode implementation
+* To make the game more interactive and fun for users to play against other users.
+
+#### Leaderboard
+* A player ranking system based on their performance (score), for more competition and also for the user to track their progress.
 
 
 
@@ -90,9 +98,26 @@ No errors were found when passing through the official [Jigsaw validator](https:
 
 ![CSS no errors](assets/images/CSSnoErr.PNG)
 
-### Unfixed bugs
+#### jsHint
+* No major errors were found on jsHint as I run the code through just warnings.
 
-The alignment of the emojis on an iPhone is not perfect. Having plans to fix that in the future.
+![jsHint no errors](assets/images/jshint.PNG)
+
+#### Lighthouse
+
+##### Performance
+
+![performance](assets/images/lighthouse1.PNG)
+
+##### Accessibility
+
+![accessibility](assets/images/accessibility.PNG)
+
+##### Best practices and SEO
+
+![SEO](assets/images/SEO.PNG)
+
+
 
 
 ## Deployment
@@ -106,4 +131,22 @@ From the source section drop-down menu, select the Master Branch
 Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
 The live link can be found here - https://jabengjab.github.io/PP2-Roshambeau-Andrew-Djaba/
+
+## Bugs
+
+* Accessibility after using lighthouse is 89%. I left it as it is due to time. This will be fixed in due time.
+
+* The alignment of the emojis on an iPhone is not perfect. Having plans to fix that in the future
+
+
+## Credits
+
+### Contents
+* The fonts for the webpage was sourced from Google Fonts ( https://fonts.google.com/)
+
+### Acknowlegdements
+
+* Thanks to the Code Institutes Love Maths walkthrough project, I got the idea to of how to structure my functions in the script.js for example.
+
+* Tutor support was also a great help to me. I was never stuck again after I communicated my problem with them.
 

@@ -31,9 +31,14 @@ h1 {
     background-color: hsl(200, 100%, 70%);
 }
 
-#playerDisplay, #computerDisplay {
+#playerDisplay {
     font-size: 2.5rem;
-    color: #ad8c45;
+    color: rgba(103, 103, 224, 0.945);;
+}
+
+#computerDisplay {
+    font-size: 2.5rem;
+    color: rgba(3, 48, 3, 0.945);;
 }
 
 #resultDisplay {
