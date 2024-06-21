@@ -1,3 +1,4 @@
+/* Body */ 
 body {
     background: #d6e46f;
     font-family: 'Lato', sans-serif;
@@ -136,5 +137,40 @@ h1{
     .reset {
         font-size: 1.2rem;
         padding: 0.7rem 1.2rem;
+    }
+}
+
+/* Media Query for Larger Screens */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 5.5rem;
+    }
+
+    .choices button {
+        font-size: 8.5rem;
+        min-width: 180px;
+        margin: 0 12px;
+    }
+
+    #playerDisplay, #computerDisplay {
+        font-size: 3rem;
+    }
+
+    #resultDisplay {
+        font-size: 6rem;
+        margin: 40px 0;
+    }
+
+    .scoreDisplay {
+        font-size: 2.5rem;
+    }
+
+    .scoreboard p {
+        font-size: 35px;
+    }
+
+    .reset {
+        font-size: 1.5rem;
+        padding: 0.8rem 1.5rem;
     }
 }
